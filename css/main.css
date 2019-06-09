@@ -7,6 +7,10 @@ body{
     /* grid-template-rows: 300px 300px; */
     /* filas/columnas */
     grid-template: 300px 100px 100px / 50% 200px 100px;
+    /* grid-column-gap: 30px; */
+    /* grid-row-gap: 50px; */
+    /* filas columnas */
+    grid-gap: 10px 100px;
 }
 .item{
     background: lightblue;
@@ -20,7 +24,7 @@ body{
     /* display: subgrid; */ 
     /* Se tiene que duplicar estas lineas */
     display: grid;
-    grid-template: 50px 50px 50px / 50px 50px 50px;
+    grid-template: 50px 50px 50px / 200px 200px 200px;
 }
 .item .item {
     background: yellow;

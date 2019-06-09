@@ -8,27 +8,33 @@ body{
     /* filas/columnas */
     /* grid-template: 300px 100px 100px / repeat(4, 1fr); */
     /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
-    grid-template: 300px 100px 100px / minmax(200px, 1fr) 1fr 1fr 1fr;
-
+    grid-template: 100px 1fr 150px / 200px 1fr;
     /* grid-column-gap: 30px; */
     /* grid-row-gap: 50px; */
     /* filas columnas */
     grid-gap: 10px;
+    grid-template-areas: "header header"
+                         "left contenido"
+                         "footer footer";
+    height: 100vh;
 }
 .item{
     background: lightblue;
     padding: 10px;
     border: 1px solid red;
 }
-.container > .item:nth-of-type(4){
-    background: blue;
-    overflow: auto;
-    /* Hasta ahora no funcion, lo que haria es heredar de grid */
-    /* display: subgrid; */ 
-    /* Se tiene que duplicar estas lineas */
-    display: grid;
-    grid-template: 50px 50px 50px / 200px 200px 200px;
-}
 .item .item {
     background: yellow;
+}
+.header{
+    grid-area: header;
+}
+.left{
+    grid-area: left;
+}
+.contenido{
+    grid-area: contenido
+}
+.footer{
+    grid-area: footer;
 }

@@ -13,3 +13,15 @@ body{
     padding: 10px;
     border: 1px solid red;
 }
+.container > .item:nth-of-type(4){
+    background: blue;
+    overflow: auto;
+    /* Hasta ahora no funcion, lo que haria es heredar de grid */
+    /* display: subgrid; */ 
+    /* Se tiene que duplicar estas lineas */
+    display: grid;
+    grid-template: 50px 50px 50px / 50px 50px 50px;
+}
+.item .item {
+    background: yellow;
+}
